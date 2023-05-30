@@ -32,10 +32,7 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": {
-    "name": "char_a_p1_0bas_humn_v0113",
-    "path": "sprites/char_a_p1_0bas_humn_v0113/char_a_p1_0bas_humn_v0113.yy",
-  },
+  "spriteId": null,
   "spriteMaskId": {
     "name": "char_hitbox_spr",
     "path": "sprites/char_hitbox_spr/char_hitbox_spr.yy",
