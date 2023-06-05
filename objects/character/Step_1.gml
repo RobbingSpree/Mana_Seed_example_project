@@ -3,17 +3,14 @@
 //intend to replace this with an impart force approach so npcs can have the same controller
 
 //gather input
-var left = keyboard_check(vk_left) || keyboard_check(ord("A"));
-var right = keyboard_check(vk_right) || keyboard_check(ord("D"));
-var down = keyboard_check(vk_down) || keyboard_check(ord("S"));
-var up = keyboard_check(vk_up) || keyboard_check(ord("W"));
+input.check_dpad();
 
-inputX = right - left;
-inputY = down - up;
+inputX = input.d_right - input.d_left;
+inputY = input.d_down - input.d_up;
 
 //update facing 
 //facing favors left and right, to change this move the direction to favor to the bottom of the list
-if down facing = 0;
-if up facing = 1;
-if left facing = 3;
-if right facing = 2;
+if input.d_down facing = 0;
+if input.d_up facing = 1;
+if input.d_left facing = 3;
+if input.d_right facing = 2;

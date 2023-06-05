@@ -44,6 +44,7 @@
     {"id":{"name":"solid_","path":"objects/solid_/solid_.yy",},},
     {"id":{"name":"wasd_spr","path":"sprites/wasd_spr/wasd_spr.yy",},},
     {"id":{"name":"char_a_p1_5hat_pfht_v04","path":"sprites/char_a_p1_5hat_pfht_v04/char_a_p1_5hat_pfht_v04.yy",},},
+    {"id":{"name":"controls_scripts","path":"scripts/controls_scripts/controls_scripts.yy",},},
     {"id":{"name":"animation_system","path":"scripts/animation_system/animation_system.yy",},},
     {"id":{"name":"solid_primitive_spr","path":"sprites/solid_primitive_spr/solid_primitive_spr.yy",},},
     {"id":{"name":"char_a_p1_1out_boxr_v01","path":"sprites/char_a_p1_1out_boxr_v01/char_a_p1_1out_boxr_v01.yy",},},

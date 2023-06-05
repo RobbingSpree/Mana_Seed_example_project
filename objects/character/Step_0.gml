@@ -2,10 +2,8 @@
 
 animation_update();
 
-var _shift = keyboard_check(vk_shift); //might make this a object variable instead of local variable so it can be collected in begin step
-
 //only use input in states where input is read
-if state == global.states.idle || state == global.states.walk || state == global.states.run {
+if state == states.idle || state == states.walk || state == states.run {
 	//check for move modifiers
 	var m_mod = 1 + running_mult * keyboard_check(vk_shift);
 	moveX = lerp(moveX, inputX * moveSpeed*m_mod, 0.2);
@@ -17,32 +15,30 @@ if state == global.states.idle || state == global.states.walk || state == global
 		x += moveX;
 		hold_count = 0; 
 	} else {
-		hold_count++;
-		push_dir = if_walk_comes_to_push(facing,_shift);
+		
 	}
 	if !position_meeting(x,y+moveY,solid_) {
 		//commit to movement, release any holds
 		y += moveY;
 		hold_count = 0;
 	} else {
-		hold_count++;
-		push_dir = if_walk_comes_to_push(facing,_shift);
+
 	}
 
 	//check if any direction buttons are pressed
 	if inputX != 0 || inputY != 0 {
 		//sprite update to move
-		if _shift
-			state_set(global.states.run);
+		if input.shift
+			state_set(states.run);
 		else
-			state_set(global.states.walk);
+			state_set(states.walk);
 	} else {
 		//sprite update to idle
-		state_set(global.states.idle);
+		state_set(states.idle);
 	}
 }
 
-if state == global.states.push || state == global.states.pull {
+if state == states.push || state == states.pull {
 	
 }
 

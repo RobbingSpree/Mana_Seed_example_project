@@ -35,4 +35,7 @@ draw_text(20,60,ani);
 draw_text(20,80,hold_count);
 draw_circle(x+moveX,y+moveY,3,false); //to show where the character object actually thinks it is, in case the offsets are wrong
 
-
+draw_text(20,120,input.d_left);
+draw_text(20,140,input.d_right);
+draw_text(20,160,input.d_down);
+draw_text(20,180,input.d_up);

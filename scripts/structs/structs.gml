@@ -48,11 +48,11 @@ function state_set(_state) {
 
 function state_graph(_state) { //mosatly used if you want a state to last only as long as the animation or to only run once
 	switch _state.state_name {
-		case "walk":	stateOnEnd = global.states.walk; break;
-		case "run":		stateOnEnd = global.states.run; break;
-		case "push":	stateOnEnd = global.states.push; break;
-		case "pull":	stateOnEnd = global.states.pull; break;
-		default:		stateOnEnd = global.states.idle; break;
+		case "walk":	stateOnEnd = states.walk; break;
+		case "run":		stateOnEnd = states.run; break;
+		case "push":	stateOnEnd = states.push; break;
+		case "pull":	stateOnEnd = states.pull; break;
+		default:		stateOnEnd = states.idle; break;
 	}
 }
 
@@ -97,5 +97,46 @@ function char_display() constructor{
 	
 }
 
-
+function controller_handler() constructor{
+	//dpad movement
+	d_left = false;
+	d_right = false;
+	d_down = false;
+	d_up = false;
+	left_held = 0;
+	right_held = 0;
+	down_held = 0;
+	up_held = 0;
+	
+	//action buttons
+	shift = false;
+	interact = false;
+	attack = false;
+	
+	//control scheme //for on the sly control scheme changes
+	control_scheme = "WASD";
+	
+	function check_dpad() {
+		switch (control_scheme) {
+			case "WASD": wasd_update(); break;
+			case "ESDF": esdf_update(); break;
+			case "ARROW": dpad_update(); break;
+			default: wasd_update();
+		}
+	}
+	
+	function check_interact() {
+		//currently has no way to rebing key to something else, need a method to pass functions as variables to store which key or button is used
+		return keyboard_check(vk_space);
+	}
+	
+	function check_shift() {
+		return keyboard_check(vk_shift);
+	}
+	
+	function check_attack() {
+		return keyboard_check(ord("Q"));
+	}
+	
+}
 
