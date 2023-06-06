@@ -1,6 +1,6 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function State(name, ind, lin) constructor{
+function State(name, ind, lin, parent) constructor{
 	state_name = name;
 	state_index = ind; //not used for anything yet, was kinda put in place to make reading the state enums easier but haven't needed it yet
 	linear = lin; 
@@ -108,6 +108,10 @@ function controller_handler() constructor{
 	down_held = 0;
 	up_held = 0;
 	
+	//dpad maths
+	inputX = 0;
+	inputY = 0;
+	
 	//action buttons
 	shift = false;
 	interact = false;
@@ -136,6 +140,46 @@ function controller_handler() constructor{
 	
 	function check_attack() {
 		return keyboard_check(ord("Q"));
+	}
+	
+	function hold_update() {
+		if d_left { left_held++ } else { left_held = 0; }
+		if d_right { right_held++ } else { right_held = 0; }
+		if d_down { down_held++ } else { down_held = 0; }
+		if d_up { up_held++ } else { up_held = 0; }
+	}
+
+	function wasd_update(){
+		d_left =	keyboard_check(ord("A"));
+		d_right =	keyboard_check(ord("D"));
+		d_down =	keyboard_check(ord("S"));
+		d_up =		keyboard_check(ord("W"));
+		other_buttons();
+	}
+
+	function esdf_update(){ //I like using ESDF ok
+		d_left =	keyboard_check(ord("S"));
+		d_right =	keyboard_check(ord("F"));
+		d_down =	keyboard_check(ord("D"));
+		d_up =		keyboard_check(ord("E"));
+		other_buttons();
+	}
+
+	function dpad_update(){ 
+		d_left =	keyboard_check(vk_left);
+		d_right =	keyboard_check(vk_right);
+		d_down =	keyboard_check(vk_down);
+		d_up =		keyboard_check(vk_up);
+		other_buttons();
+	}
+
+	function other_buttons() {
+		hold_update();
+		shift = check_shift();
+		interact = check_interact();
+		attack = check_attack();
+		inputX = d_right - d_left;
+		inputY = d_down - d_up;
 	}
 	
 }

@@ -32,7 +32,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "char_hitbox_spr",
+    "path": "sprites/char_hitbox_spr/char_hitbox_spr.yy",
+  },
   "spriteMaskId": {
     "name": "char_hitbox_spr",
     "path": "sprites/char_hitbox_spr/char_hitbox_spr.yy",
