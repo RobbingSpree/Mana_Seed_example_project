@@ -26,7 +26,7 @@
   "origin": 0,
   "parent": {
     "name": "5hat",
-    "path": "folders/Sprites/char_a_p1/5hat.yy",
+    "path": "folders/Shaders/Sprites/char_a_p1/5hat.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

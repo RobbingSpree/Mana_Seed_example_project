@@ -28,7 +28,7 @@
   "origin": 0,
   "parent": {
     "name": "primities",
-    "path": "folders/Sprites/primities.yy",
+    "path": "folders/Shaders/Sprites/primities.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

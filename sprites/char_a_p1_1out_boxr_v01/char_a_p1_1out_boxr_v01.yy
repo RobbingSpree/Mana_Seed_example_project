@@ -26,7 +26,7 @@
   "origin": 0,
   "parent": {
     "name": "1out",
-    "path": "folders/Sprites/char_a_p1/1out.yy",
+    "path": "folders/Shaders/Sprites/char_a_p1/1out.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

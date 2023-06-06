@@ -26,7 +26,7 @@
   "origin": 0,
   "parent": {
     "name": "4har",
-    "path": "folders/Sprites/char_a_p1/4har.yy",
+    "path": "folders/Shaders/Sprites/char_a_p1/4har.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
