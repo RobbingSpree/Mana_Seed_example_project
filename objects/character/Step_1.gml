@@ -5,9 +5,6 @@
 //gather input
 input.check_dpad();
 
-inputX = input.d_right - input.d_left;
-inputY = input.d_down - input.d_up;
-
 //update facing 
 //facing favors left and right, to change this move the direction to favor to the bottom of the list
 if input.d_down facing = 0;

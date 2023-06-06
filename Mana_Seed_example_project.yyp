@@ -48,6 +48,7 @@
     {"id":{"name":"animation_system","path":"scripts/animation_system/animation_system.yy",},},
     {"id":{"name":"solid_primitive_spr","path":"sprites/solid_primitive_spr/solid_primitive_spr.yy",},},
     {"id":{"name":"char_a_p1_1out_boxr_v01","path":"sprites/char_a_p1_1out_boxr_v01/char_a_p1_1out_boxr_v01.yy",},},
+    {"id":{"name":"state_machine","path":"scripts/state_machine/state_machine.yy",},},
     {"id":{"name":"char_a_p1_4har_dap1_v01","path":"sprites/char_a_p1_4har_dap1_v01/char_a_p1_4har_dap1_v01.yy",},},
     {"id":{"name":"structs","path":"scripts/structs/structs.yy",},},
     {"id":{"name":"wasd_watcher","path":"objects/wasd_watcher/wasd_watcher.yy",},},

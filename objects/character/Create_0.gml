@@ -29,14 +29,14 @@ split = false; //true if you've split the sheet into indervidual frames, false i
 outfit = new char_display();
 
 //initalize state machine 
-//state call syntax: ("name of state", index for checking if change has occured between frames, if the frames information needs just a start and end point or if all frames need to be named)
+//state call syntax: ("name of state", index for checking if change has occured between frames, if the frames information needs just a start and end point or if all frames need to be named, the parent that some sub scripts need to run back at this level)
 states = {
-	idle :	new State("idle",0, true),
-	walk :	new State("walk",1, true),
-	run :	new State("run",2, false),
-	jump:	new State("jump",3, false),
-	push:	new State("push",4, true),
-	pull:	new State("pull",5, true),
+	idle :	new State("idle",0, true, self),
+	walk :	new State("walk",1, true, self),
+	run :	new State("run",2, false, self),
+	jump:	new State("jump",3, false, self),
+	push:	new State("push",4, true, self),
+	pull:	new State("pull",5, true, self),
 }
 
 //gotta be a way to make this part of the constructor, but it tries to point to LWO before they exist somehow

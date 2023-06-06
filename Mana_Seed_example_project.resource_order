@@ -26,6 +26,7 @@
     {"name":"wasd_spr","order":1,"path":"sprites/wasd_spr/wasd_spr.yy",},
     {"name":"controls_scripts","order":3,"path":"scripts/controls_scripts/controls_scripts.yy",},
     {"name":"animation_system","order":2,"path":"scripts/animation_system/animation_system.yy",},
+    {"name":"state_machine","order":4,"path":"scripts/state_machine/state_machine.yy",},
     {"name":"char_a_p1_4har_dap1_v01","order":1,"path":"sprites/char_a_p1_4har_dap1_v01/char_a_p1_4har_dap1_v01.yy",},
     {"name":"structs","order":1,"path":"scripts/structs/structs.yy",},
     {"name":"wasd_watcher","order":2,"path":"objects/wasd_watcher/wasd_watcher.yy",},
