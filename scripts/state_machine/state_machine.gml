@@ -17,6 +17,7 @@ function idle_step(parent) {
 				state = states.run;
 			else
 				state = states.walk;
+			ani_reset();
 			move_step(parent);
 		}
 		//check for interact button input and a nearby object to interact with
@@ -31,6 +32,7 @@ function move_step(parent) {
 		//check for dpad0
 		if input.inputX == 0 && input.inputY == 0 {
 			state = states.idle;
+			ani_reset();
 		}
 		//check for dpad input
 		var m_mod = 1 + running_mult * keyboard_check(vk_shift);
@@ -39,6 +41,7 @@ function move_step(parent) {
 		//check for shift toggle
 		if state.state_name == "walk" && input.shift {
 			state = states.run;
+			//don't reset animation data since walk and run need to share delta and animation length			
 		}
 		if state.state_name == "run" && !input.shift {
 			state = states.walk;

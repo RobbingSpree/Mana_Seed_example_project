@@ -8,7 +8,7 @@ function State(name, ind, lin, parent) constructor{
 	first_frame = [];
 	frame_rate = [];
 	length = 0; //default value, will be set below
-	page = 0; //which page of the 
+	page = 0; //which page of the sprite sheets to look at
 	stateOnEnd = undefined;
 	
 	if linear {

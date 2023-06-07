@@ -29,13 +29,9 @@ if split == false {
 }
 //debug values
 draw_text(20,5,state.state_name);
-draw_text(20,20,image_index);
-draw_text(20,40,facing);
-draw_text(20,60,ani);
+draw_text(20,20,"Image Index: "+string(image_index));
+draw_healthbar(20,40,120,50,delta/10,c_black,c_green,c_red,0,0,1);
+draw_text(20,60,"Subframe count: "+string(ani));
 draw_text(20,80,hold_count);
 draw_circle(x+moveX,y+moveY,3,false); //to show where the character object actually thinks it is, in case the offsets are wrong
 
-draw_text(20,120,input.d_left);
-draw_text(20,140,input.d_right);
-draw_text(20,160,input.d_down);
-draw_text(20,180,input.d_up);
