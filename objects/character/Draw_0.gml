@@ -32,6 +32,8 @@ draw_text(20,5,state.state_name);
 draw_text(20,20,"Image Index: "+string(image_index));
 draw_healthbar(20,40,120,50,delta/10,c_black,c_green,c_red,0,0,1);
 draw_text(20,60,"Subframe count: "+string(ani));
-draw_text(20,80,hold_count);
+draw_text(20,80,state.frame_rate);
+draw_text(20,100,state.frames);
+draw_text(20,120,state.first_frame);
 draw_circle(x+moveX,y+moveY,3,false); //to show where the character object actually thinks it is, in case the offsets are wrong
 
