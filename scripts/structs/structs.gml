@@ -38,14 +38,6 @@ function State(name, ind, lin, parent) constructor{
 	}
 }
 
-function state_set(_state) {
-	if _state == state return; //abort changing state if changing into current state
-	state = _state;
-	
-	image_index = state.first_frame[facing]; //reset frame to first in array
-	ani = 0;
-}
-
 function state_graph(_state) { //mosatly used if you want a state to last only as long as the animation or to only run once
 	switch _state.state_name {
 		case "walk":	stateOnEnd = states.walk; break;

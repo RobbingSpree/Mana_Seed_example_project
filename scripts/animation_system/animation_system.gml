@@ -22,7 +22,7 @@ function ani_reset() {
 	//resets variables used in animation
 	ani = 0;
 	delta = 0;
-	image_index = state.first_frame[facing];
+	//image_index = state.first_frame[facing];
 }
 
 /*I
