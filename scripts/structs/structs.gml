@@ -39,12 +39,12 @@ function State(name, ind, lin, parent) constructor{
 }
 
 function state_graph(_state) { //mosatly used if you want a state to last only as long as the animation or to only run once
-	switch _state.state_name {
-		case "walk":	stateOnEnd = states.walk; break;
-		case "run":		stateOnEnd = states.run; break;
-		case "push":	stateOnEnd = states.push; break;
-		case "pull":	stateOnEnd = states.pull; break;
-		default:		stateOnEnd = states.idle; break;
+	switch _state {
+		case "walk":	return states.walk; break;
+		case "run":		return states.run; break;
+		case "push":	return states.push; break;
+		case "pull":	return states.pull; break;
+		default:		return states.idle; break;
 	}
 }
 

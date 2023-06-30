@@ -20,6 +20,7 @@ hold_max = 240; //max number of frames till a held attack auto launches
 jump_dist = 32; //distance the character will travel during a jump
 delta = 0; //time in miliseconds used for sub-frame animation handler
 image_speed = 0; //set to 0 on purpose, frame progress is handled by a script
+i_index = 0;
 y_offset = 0; //used for fake vertical elevation
 under_layer = char_a_p1_0bas_humn_v01; //skin tone
 
@@ -40,12 +41,12 @@ states = {
 }
 
 //gotta be a way to make this part of the constructor, but it tries to point to LWO before they exist somehow
-state_graph(states.idle);
-state_graph(states.walk);
-state_graph(states.run);
-state_graph(states.jump);
-state_graph(states.push);
-state_graph(states.pull);
+states.idle.stateOnEnd = state_graph("idle");
+states.walk.stateOnEnd = state_graph("walk");
+states.run.stateOnEnd = state_graph("run");
+states.jump.stateOnEnd = state_graph("jump");
+states.push.stateOnEnd = state_graph("push");
+states.pull.stateOnEnd = state_graph("pull");
 
 //set initial state
 state = states.idle;
